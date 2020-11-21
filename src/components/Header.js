@@ -1,12 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <Header>
-      <div>
-        <h1> React - Todo App</h1>
-      </div>
-    </Header> 
-  );
+    <header style={{textAlign: 'center'}}>
+      <h1 style={{marginBottom: '15px'}}>TodoList</h1>
+      <Link style={linkStyle} to="/">Home</Link> | <Link style={linkStyle} to="/about">About</Link>
+    </header>
+  )
 }
+
+const linkStyle = {
+  color: '#fff',
+  textDecoration: 'none'
+}
+
 export default Header;
